@@ -10,7 +10,7 @@ import Contact from './containers/Contact'
 import history from './history'
 
 const App = () => (
-  <Router history={history} basename="https://charlesonesti.github.io/Portfolio/">
+  <Router history={history} basename={process.env.PUBLIC_URL}>
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <Switch>
