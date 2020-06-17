@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/charlesonesti.com/static/css/main.eb19a952.chunk.css",
-    "main.js": "/charlesonesti.com/static/js/main.92e3ed59.chunk.js",
-    "main.js.map": "/charlesonesti.com/static/js/main.92e3ed59.chunk.js.map",
-    "runtime-main.js": "/charlesonesti.com/static/js/runtime-main.c5c8f842.js",
-    "runtime-main.js.map": "/charlesonesti.com/static/js/runtime-main.c5c8f842.js.map",
-    "static/js/2.37cbc2ec.chunk.js": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js",
-    "static/js/2.37cbc2ec.chunk.js.map": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js.map",
-    "index.html": "/charlesonesti.com/index.html",
-    "precache-manifest.c4611f3ed332119b72d730ec41fb7a0d.js": "/charlesonesti.com/precache-manifest.c4611f3ed332119b72d730ec41fb7a0d.js",
-    "service-worker.js": "/charlesonesti.com/service-worker.js",
-    "static/css/main.eb19a952.chunk.css.map": "/charlesonesti.com/static/css/main.eb19a952.chunk.css.map",
-    "static/js/2.37cbc2ec.chunk.js.LICENSE.txt": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js.LICENSE.txt",
-    "static/media/decor2.png": "/charlesonesti.com/static/media/decor2.7c481b8c.png",
-    "static/media/owllogo.png": "/charlesonesti.com/static/media/owllogo.219a3684.png",
-    "static/media/profilepic.png": "/charlesonesti.com/static/media/profilepic.60db1f87.png"
+    "main.css": "/static/css/main.eb19a952.chunk.css",
+    "main.js": "/static/js/main.92e3ed59.chunk.js",
+    "main.js.map": "/static/js/main.92e3ed59.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1e2782f1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1e2782f1.js.map",
+    "static/js/2.5eccacf2.chunk.js": "/static/js/2.5eccacf2.chunk.js",
+    "static/js/2.5eccacf2.chunk.js.map": "/static/js/2.5eccacf2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bb80004f1a3d270689b94dfb157c89b0.js": "/precache-manifest.bb80004f1a3d270689b94dfb157c89b0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.eb19a952.chunk.css.map": "/static/css/main.eb19a952.chunk.css.map",
+    "static/js/2.5eccacf2.chunk.js.LICENSE.txt": "/static/js/2.5eccacf2.chunk.js.LICENSE.txt",
+    "static/media/decor2.png": "/static/media/decor2.7c481b8c.png",
+    "static/media/owllogo.png": "/static/media/owllogo.219a3684.png",
+    "static/media/profilepic.png": "/static/media/profilepic.60db1f87.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5c8f842.js",
-    "static/js/2.37cbc2ec.chunk.js",
+    "static/js/runtime-main.1e2782f1.js",
+    "static/js/2.5eccacf2.chunk.js",
     "static/css/main.eb19a952.chunk.css",
     "static/js/main.92e3ed59.chunk.js"
   ]
