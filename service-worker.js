@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/charlesonesti.com/precache-manifest.259e387b1b356a01563f520e3c91b56a.js"
+  "/charlesonesti.com/precache-manifest.c4611f3ed332119b72d730ec41fb7a0d.js"
 );
 
 self.addEventListener('message', (event) => {
