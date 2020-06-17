@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.eb19a952.chunk.css",
-    "main.js": "/portfolio/static/js/main.e3f402ee.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.e3f402ee.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.2c618ecd.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.2c618ecd.js.map",
-    "static/js/2.83bdb752.chunk.js": "/portfolio/static/js/2.83bdb752.chunk.js",
-    "static/js/2.83bdb752.chunk.js.map": "/portfolio/static/js/2.83bdb752.chunk.js.map",
-    "index.html": "/portfolio/index.html",
-    "precache-manifest.e8b859fa3671909dd62915808879b173.js": "/portfolio/precache-manifest.e8b859fa3671909dd62915808879b173.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.eb19a952.chunk.css.map": "/portfolio/static/css/main.eb19a952.chunk.css.map",
-    "static/js/2.83bdb752.chunk.js.LICENSE.txt": "/portfolio/static/js/2.83bdb752.chunk.js.LICENSE.txt",
-    "static/media/decor2.png": "/portfolio/static/media/decor2.7c481b8c.png",
-    "static/media/owllogo.png": "/portfolio/static/media/owllogo.219a3684.png",
-    "static/media/profilepic.png": "/portfolio/static/media/profilepic.60db1f87.png"
+    "main.css": "/charlesonesti.com/static/css/main.eb19a952.chunk.css",
+    "main.js": "/charlesonesti.com/static/js/main.e3f402ee.chunk.js",
+    "main.js.map": "/charlesonesti.com/static/js/main.e3f402ee.chunk.js.map",
+    "runtime-main.js": "/charlesonesti.com/static/js/runtime-main.c5c8f842.js",
+    "runtime-main.js.map": "/charlesonesti.com/static/js/runtime-main.c5c8f842.js.map",
+    "static/js/2.37cbc2ec.chunk.js": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js",
+    "static/js/2.37cbc2ec.chunk.js.map": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js.map",
+    "index.html": "/charlesonesti.com/index.html",
+    "precache-manifest.aee74313cfd84603b861bebea343b7a9.js": "/charlesonesti.com/precache-manifest.aee74313cfd84603b861bebea343b7a9.js",
+    "service-worker.js": "/charlesonesti.com/service-worker.js",
+    "static/css/main.eb19a952.chunk.css.map": "/charlesonesti.com/static/css/main.eb19a952.chunk.css.map",
+    "static/js/2.37cbc2ec.chunk.js.LICENSE.txt": "/charlesonesti.com/static/js/2.37cbc2ec.chunk.js.LICENSE.txt",
+    "static/media/decor2.png": "/charlesonesti.com/static/media/decor2.7c481b8c.png",
+    "static/media/owllogo.png": "/charlesonesti.com/static/media/owllogo.219a3684.png",
+    "static/media/profilepic.png": "/charlesonesti.com/static/media/profilepic.60db1f87.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c618ecd.js",
-    "static/js/2.83bdb752.chunk.js",
+    "static/js/runtime-main.c5c8f842.js",
+    "static/js/2.37cbc2ec.chunk.js",
     "static/css/main.eb19a952.chunk.css",
     "static/js/main.e3f402ee.chunk.js"
   ]
