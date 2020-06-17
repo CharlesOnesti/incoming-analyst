@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.eb19a952.chunk.css",
-    "main.js": "/Portfolio/static/js/main.68044024.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.68044024.chunk.js.map",
-    "runtime-main.js": "/Portfolio/static/js/runtime-main.ba1094b7.js",
-    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.ba1094b7.js.map",
-    "static/js/2.c71782dd.chunk.js": "/Portfolio/static/js/2.c71782dd.chunk.js",
-    "static/js/2.c71782dd.chunk.js.map": "/Portfolio/static/js/2.c71782dd.chunk.js.map",
-    "index.html": "/Portfolio/index.html",
-    "precache-manifest.62b4a642e987c2c0f5ff05454c59bd3a.js": "/Portfolio/precache-manifest.62b4a642e987c2c0f5ff05454c59bd3a.js",
-    "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/main.eb19a952.chunk.css.map": "/Portfolio/static/css/main.eb19a952.chunk.css.map",
-    "static/js/2.c71782dd.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.c71782dd.chunk.js.LICENSE.txt",
-    "static/media/decor2.png": "/Portfolio/static/media/decor2.7c481b8c.png",
-    "static/media/owllogo.png": "/Portfolio/static/media/owllogo.219a3684.png",
-    "static/media/profilepic.png": "/Portfolio/static/media/profilepic.60db1f87.png"
+    "main.css": "/portfolio/static/css/main.eb19a952.chunk.css",
+    "main.js": "/portfolio/static/js/main.f77c25f3.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.f77c25f3.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.2c618ecd.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.2c618ecd.js.map",
+    "static/js/2.4744dced.chunk.js": "/portfolio/static/js/2.4744dced.chunk.js",
+    "static/js/2.4744dced.chunk.js.map": "/portfolio/static/js/2.4744dced.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.2a4268e8779fef68a8d00f6e87c18daa.js": "/portfolio/precache-manifest.2a4268e8779fef68a8d00f6e87c18daa.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.eb19a952.chunk.css.map": "/portfolio/static/css/main.eb19a952.chunk.css.map",
+    "static/js/2.4744dced.chunk.js.LICENSE.txt": "/portfolio/static/js/2.4744dced.chunk.js.LICENSE.txt",
+    "static/media/decor2.png": "/portfolio/static/media/decor2.7c481b8c.png",
+    "static/media/owllogo.png": "/portfolio/static/media/owllogo.219a3684.png",
+    "static/media/profilepic.png": "/portfolio/static/media/profilepic.60db1f87.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ba1094b7.js",
-    "static/js/2.c71782dd.chunk.js",
+    "static/js/runtime-main.2c618ecd.js",
+    "static/js/2.4744dced.chunk.js",
     "static/css/main.eb19a952.chunk.css",
-    "static/js/main.68044024.chunk.js"
+    "static/js/main.f77c25f3.chunk.js"
   ]
 }
