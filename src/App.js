@@ -1,6 +1,6 @@
 import React from 'react'
 import { ApolloProvider } from '@apollo/react-hooks'
-import { Switch, Route, Router } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import client from './client'
@@ -10,7 +10,7 @@ import Contact from './containers/Contact'
 import history from './history'
 
 const App = () => (
-  <Router history={history} basename={process.env.PUBLIC_URL}>
+  <BrowserRouter history={history} basename="/">
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <Switch>
@@ -20,7 +20,7 @@ const App = () => (
         </Switch>
       </ApolloProvider>
     </ThemeProvider>
-  </Router>
+  </BrowserRouter>
 )
 
 export default App
