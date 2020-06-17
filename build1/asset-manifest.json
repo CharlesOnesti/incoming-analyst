@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.eb19a952.chunk.css",
+    "main.js": "/Portfolio/static/js/main.76b893f9.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.76b893f9.chunk.js.map",
+    "runtime-main.js": "/Portfolio/static/js/runtime-main.ba1094b7.js",
+    "runtime-main.js.map": "/Portfolio/static/js/runtime-main.ba1094b7.js.map",
+    "static/js/2.c71782dd.chunk.js": "/Portfolio/static/js/2.c71782dd.chunk.js",
+    "static/js/2.c71782dd.chunk.js.map": "/Portfolio/static/js/2.c71782dd.chunk.js.map",
+    "index.html": "/Portfolio/index.html",
+    "precache-manifest.ecdd147b4695d20bddd51bb9a30dc270.js": "/Portfolio/precache-manifest.ecdd147b4695d20bddd51bb9a30dc270.js",
+    "service-worker.js": "/Portfolio/service-worker.js",
+    "static/css/main.eb19a952.chunk.css.map": "/Portfolio/static/css/main.eb19a952.chunk.css.map",
+    "static/js/2.c71782dd.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.c71782dd.chunk.js.LICENSE.txt",
+    "static/media/decor2.png": "/Portfolio/static/media/decor2.7c481b8c.png",
+    "static/media/owllogo.png": "/Portfolio/static/media/owllogo.219a3684.png",
+    "static/media/profilepic.png": "/Portfolio/static/media/profilepic.60db1f87.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ba1094b7.js",
+    "static/js/2.c71782dd.chunk.js",
+    "static/css/main.eb19a952.chunk.css",
+    "static/js/main.76b893f9.chunk.js"
+  ]
+}
