@@ -10,7 +10,7 @@ import Contact from './containers/Contact'
 import history from './history'
 
 const App = () => (
-  <Router history={history}>
+  <Router history={history} basename="https://charlesonesti.github.io/Portfolio/">
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <Switch>
