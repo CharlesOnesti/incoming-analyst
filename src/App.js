@@ -8,7 +8,7 @@ import Home from './containers/Home'
 import history from './history'
 
 const App = () => (
-  <BrowserRouter history={history} basename="/">
+  <BrowserRouter history={history}>
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <Switch>
