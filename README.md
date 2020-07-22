@@ -1,21 +1,25 @@
 # incoming-analyst
 An LBO practice app for analyst interview prep
 
+---Variables---
 
 LTM_Rev = Even number between 100 and 900
+
 EBITDA_margin = Either 10, 20, 30, 40
+
 Debt_percent = Either 50, 60, 70, 80
+
 Int_rate = Either 5 or 10
 
 Rev_growth Either 5, 10, 15, 20
+
 Tax_rate = Either 20, 25, 30, 35, 40
 
 CapEx_pr = Either 5, 10, or 20
 
 NWC_pr = Either 10 or 20
 
-
-
+---Prompt---
 
 You are tasked with evaluating an investment opportunity in Company A, which has an LTM Revenue of [LTM_Rev] and an EBITDA Margin of [EBITDA_margin] percent.
 
