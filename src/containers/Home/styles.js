@@ -24,14 +24,13 @@ export const ImageContainer = styled.div`
   }
 `
 
-export const TextBox = styled.div`
+export const WelcomeParagraph = styled.div`
   width: 100%;
-  height: 320px;
   margin: 30px 30px 30px 0px;
   position: relative;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: middle;
 `
