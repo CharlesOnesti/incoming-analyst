@@ -1,7 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Container, HStack, Logo } from './styles'
-import logo from '../../assets/decor2.png'
+import { Container, HStack } from './styles'
 import NavButton from '../NavButton'
 
 const NavBar = () => {
@@ -17,10 +16,6 @@ const NavBar = () => {
         >
           <p style={{ color: 'white', fontFamily: '' }}>Charles Onesti</p>
         </NavButton>
-      </HStack>
-      <HStack>
-        <Logo src={logo} />
-
       </HStack>
       <HStack>
         <NavButton
