@@ -3,7 +3,7 @@ import { Main } from './styles'
 import HeaderText from '../../components/HeaderText'
 
 const Quiz = () => {
-  const [attempt, setAttempt] = useState(1)
+  const [attempt, setAttempt] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   const handleSubmit = x => {
@@ -39,12 +39,23 @@ const Quiz = () => {
             <input
               type="text"
               value={attempt}
+              placeholder="answer"
               onChange={e => setAttempt(e.target.value)}
             />
             <input type="submit" value="Submit" />
           </form>
         </>
-      ) : <button type="button" onClick={() => setSubmitted(false)}>Another One</button>}
+      ) : (
+        <>
+          <p>
+            You Geussed:
+            {' '}
+            {attempt}
+          </p>
+          <p>The correct answer was BEANS</p>
+          <button type="button" onClick={() => setSubmitted(false)}>Another One</button>
+        </>
+      )}
     </Main>
   )
 }
