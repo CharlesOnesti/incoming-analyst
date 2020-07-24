@@ -1,25 +1,29 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import HeaderText from '../../components/HeaderText'
-import {WelcomeParagraph} from './styles'
+import { WelcomeParagraph } from './styles'
+import Gbutton from '../../components/Button'
 
 
 const Home = () => {
   console.log('home rendered')
+  const history = useHistory()
   return (
     <>
       <HeaderText text="Paper LBO Tool" color1="black" />
       <WelcomeParagraph>
-      <br></br>
+        <br />
         When you are ready to begin, press the button below to generate a paper LBO prompt.
       </WelcomeParagraph>
-      <br></br>
+      <br />
       <WelcomeParagraph>
         This exercise is meant to be done with pen and paper and no calculator.
       </WelcomeParagraph>
-      <br></br>
+      <br />
       <WelcomeParagraph>
-        When you are finished, click the button "Show Answer" to check your work!
+        When you are finished, click the Show Answer button to check your work!
       </WelcomeParagraph>
+      <Gbutton onClick={() => history.push('/quiz')}>START</Gbutton>
     </>
   )
 }

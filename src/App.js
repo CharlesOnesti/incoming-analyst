@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import client from './client'
 import Home from './containers/Home'
+import Quiz from './containers/Quiz'
 import history from './history'
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
       <ApolloProvider client={client}>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/quiz" component={Quiz} />
         </Switch>
       </ApolloProvider>
     </ThemeProvider>
