@@ -21,6 +21,37 @@ CapEx_pr = Either 5, 10, or 20
 
 NWC_pr = Either 10 or 20
 
+--Secondary Variables and Arrays--
+
+Entry_EV = Entry_Mult * EBITDA_Array[0]
+Entry_ND = Debt_percent * Entry_EV
+Entry_Equity = Entry_EV - Entry_ND
+
+DA_pr = CapEx_pr
+
+Year_array = [0,1,2,3,4,5]
+Rev_array = [LTM_Rev * (1+Rev_growth)^(i+1)] <- iterated
+EBITDA_array = Rev_array * EBITDA_margin
+DA_array = Rev_array * DA_pr
+Int_array = Int_rate * Entry_ND
+EBIT_array = EBITDA_array - DA_array
+PTI_array = EBIT_array - Int_array
+Tax_array = PTI_array * Tax_rate
+NI_array = PTI_array - Tax_rate
+CapEx_array = Rev_array * CapEx_pr
+NWC_array = Rev_array * NWC_pr
+NWC_Change_array = [NWC_array[i+1]-NWC_array[i]] <- 0 in first year and change in value of NWC_array from year to year after that
+FCF_array = NI_array + DA_array - NWC_Change_array - CapEx_array
+
+
+Exit_Mult = Entry_Mult
+Exit_EV = Exit_mult * EBITDA_Array[5] 
+Exit_ND = Entry_ND - sum(FCF_Array[1:5]) <- Only sum the last 5 values (Drop the 0th value)
+Exit_Equity = Exit_EV - Exit_ND
+
+MoM = Exit_Equity / Entry_Equity
+IRR = MoM ^ (1/5) - 1
+
 ---Prompt---
 
 You are tasked with evaluating an investment opportunity in Company A, which has an LTM Revenue of [LTM_Rev] and an EBITDA Margin of [EBITDA_margin] percent.
