@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 export const generate = () => {
-  const entry_mult = Math.floor(Math.random() * (10 - 5 + 1) + 5)
+  const entry_mult = Math.floor(Math.random() * (12 - 8 + 1) + 8)
   const ltm_rev = Math.floor(Math.random() * (9 - 1 + 1) + 1) * 100
   const ebitda_margin = Math.floor(Math.random() * (4 - 2 + 1) + 2) * 10
   const debt_percent = Math.floor(Math.random() * (8 - 5 + 1) + 5) * 10
