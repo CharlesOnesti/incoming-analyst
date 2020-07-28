@@ -4,6 +4,8 @@ import HeaderText from '../../components/HeaderText'
 import GButton from '../../components/Button'
 import Input from '../../components/Input'
 
+import { generate, solve } from '../../utils/utility'
+
 
 const Quiz = () => {
   const [attempt, setAttempt] = useState('')
@@ -13,13 +15,17 @@ const Quiz = () => {
     x.preventDefault()
     setSubmitted(true)
   }
+  const variables = generate()
+  console.log(variables)
+  console.log('IRR: ', solve(variables))
   return (
     <Main>
       <HeaderText text="Paper LBO Tool" color1="black" />
       <br />
       <p>
         You are tasked with evaluating an investment opportunity in Company A,
-        which has an LTM Revenue of $[LTM_Rev] million and an EBITDA Margin of [EBITDA_margin] percent.
+        which has an LTM Revenue of $[LTM_Rev] million and an EBITDA Margin of
+        [EBITDA_margin] percent.
         <br />
         <br />
         Your firm is considering to fund the acquisition with [Debt_percent] percent debt with

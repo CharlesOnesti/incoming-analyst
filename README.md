@@ -3,9 +3,9 @@ An LBO practice app for analyst interview prep
 
 ---Variables---
 
-Entry_multiple = Number between 5 and 10
+Entry_multiple = Number between 5 and 10 inclusive
 
-LTM_Rev = Even number between 100 and 900
+LTM_Rev = Either 100, 200, 300, 400... 900
 
 EBITDA_margin = Either 10, 20, 30, 40
 
