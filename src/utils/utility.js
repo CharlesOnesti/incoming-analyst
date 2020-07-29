@@ -5,7 +5,13 @@ export const generate = () => {
   const ebitda_margin = Math.floor(Math.random() * (4 - 2 + 1) + 2) * 10
   const debt_percent = Math.floor(Math.random() * (8 - 5 + 1) + 5) * 10
   const int_rate = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
-  const rev_growth = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
+  let rev_growth
+  if (entry_mult < 10) {
+    rev_growth = 5
+  } else {
+    rev_growth = 10
+  }
+  // const rev_growth = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
   const tax_rate = Math.floor(Math.random() * (8 - 4 + 1) + 4) * 5
   const capex_pr = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
   // let capex_pr
@@ -75,19 +81,19 @@ export const solve = ({
   const mom = exit_equity / entry_equity
   const irr = (mom ** 0.2) - 1
 
-  console.log('LTM_rev: ', ltm_rev)
-  console.log('rev_array: ', rev_array)
-  console.log('EBITDA_array: ', ebitda_array)
-  console.log('EBIT_array: ', ebit_array)
-  console.log('EBT_array: ', ebt_array)
-  console.log('NI_array: ', ni_array)
-  console.log('DA_array: ', da_array)
-  console.log('CapEx_array: ', capex_array)
-  console.log('nwc_change_array: ', nwc_change_array)
-  console.log('FCF_array: ', fcf_array)
-  console.log('entry_equity: ', entry_equity)
-  console.log('exit_equity: ', exit_equity)
-  console.log('entry_mult: ', entry_mult)
+  // console.log('LTM_rev: ', ltm_rev)
+  // console.log('rev_array: ', rev_array)
+  // console.log('EBITDA_array: ', ebitda_array)
+  // console.log('EBIT_array: ', ebit_array)
+  // console.log('EBT_array: ', ebt_array)
+  // console.log('NI_array: ', ni_array)
+  // console.log('DA_array: ', da_array)
+  // console.log('CapEx_array: ', capex_array)
+  // console.log('nwc_change_array: ', nwc_change_array)
+  // console.log('FCF_array: ', fcf_array)
+  // console.log('entry_equity: ', entry_equity)
+  // console.log('exit_equity: ', exit_equity)
+  // console.log('entry_mult: ', entry_mult)
 
   return irr
 }
