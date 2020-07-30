@@ -9,7 +9,6 @@ import VariableTag from '../../../../components/VariableTag'
 const Page = ({
   variables, solution, reset, setReset,
 }) => {
-  console.log('PAGE')
   const [attempt, setAttempt] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const {
@@ -23,7 +22,6 @@ const Page = ({
     capex_pr,
     nwc_pr,
   } = variables || {}
-  console.log(entry_mult)
   const handleSubmit = x => {
     x.preventDefault()
     setSubmitted(true)
@@ -38,37 +36,22 @@ const Page = ({
         <VariableTag variable={ltm_rev} />
         million and an EBITDA Margin of
         <VariableTag variable={ebitda_margin} />
-        percent.
-        <br />
-        <br />
-        Your firm is considering to fund the acquisition with
+        percent. Your firm is considering makeing a bid at
+        <VariableTag variable={entry_mult} />
+        times LTM EBITDA (assume multiple parity for exit) and funding the acquisition with
         <VariableTag variable={debt_percent} />
         percent debt with an interest rate of
         <VariableTag variable={int_rate} />
-        percent.
-        <br />
-        <br />
-        The management is confident that the firm can acheive a revenue growth of
+        percent. The management is confident that the firm can acheive a revenue growth of
         <VariableTag variable={rev_growth} />
-        percent per year and maintain constant EBITDA margins.
-        <br />
-        <br />
-        The firm has a tax rate of
+        percent per year and maintain constant EBITDA margins. he firm has a tax rate of
         <VariableTag variable={tax_rate} />
-        percent.
-        <br />
-        <br />
-        Capital Expenditures are equal to
+        percent. Capital Expenditures are equal to
         <VariableTag variable={capex_pr} />
-        percent of the revenue and are equal to Depreciation
-        <br />
-        <br />
-        Net Working Capital is
+        percent of the revenue and are equal to Depreciation. Net Working Capital is
         <VariableTag variable={nwc_pr} />
-        percent of revenue each year
-        <br />
-        <br />
-        What would the IRR of this investment be over a 5 year horizon?
+        percent of revenue each year. What would the IRR of this investment be over
+        a 5 year horizon?
       </p>
       <br />
       <AnswerBox>
@@ -89,11 +72,16 @@ const Page = ({
             <p>
               You Geussed:
               <VariableTag variable={attempt} />
+              %
             </p>
             <p>
               The correct answer was
-              <VariableTag variable={solution} />
+              <VariableTag variable={Math.round(solution * 1000) / 10} />
+              %
             </p>
+            {Math.abs(attempt - Math.round(solution * 1000) / 10) < 2.5
+              ? <p style={{ color: 'green' }}>Great Work!</p>
+              : <p style={{ color: 'red' }}>Try again</p>}
             <GButton onClick={() => {
               if (reset) {
                 setReset(false)

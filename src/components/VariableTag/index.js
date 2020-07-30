@@ -1,12 +1,12 @@
 import React from 'react'
-import { VariableTagStyle } from './styles'
+// import { VariableTagStyle } from './styles'
 
 const VariableTag = ({ variable }) => (
-  <VariableTagStyle>
+  <span>
     {' '}
     {variable}
     {' '}
-  </VariableTagStyle>
+  </span>
 )
 
 export default VariableTag

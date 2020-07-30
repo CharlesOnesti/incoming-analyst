@@ -6,7 +6,6 @@ import Gbutton from '../../components/Button'
 
 
 const Home = () => {
-  console.log('home rendered')
   const history = useHistory()
   return (
     <>

@@ -11,17 +11,8 @@ export const generate = () => {
   } else {
     rev_growth = 10
   }
-  // const rev_growth = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
   const tax_rate = Math.floor(Math.random() * (8 - 4 + 1) + 4) * 5
   const capex_pr = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
-  // let capex_pr
-  // if (temp === 1) {
-  //   capex_pr = 5
-  // } else if (temp === 2) {
-  //   capex_pr = 10
-  // } else {
-  //   capex_pr = 20
-  // }
   const nwc_pr = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 10
   return ({
     entry_mult,
