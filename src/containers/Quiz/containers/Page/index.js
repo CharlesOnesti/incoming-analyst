@@ -5,6 +5,7 @@ import HeaderText from '../../../../components/HeaderText'
 import GButton from '../../../../components/Button'
 import Input from '../../../../components/Input'
 import VariableTag from '../../../../components/VariableTag'
+import Timer from '../../../../components/Timer'
 
 const Page = ({
   variables, solution, reset, setReset,
@@ -26,34 +27,26 @@ const Page = ({
     x.preventDefault()
     setSubmitted(true)
   }
+  const text = `You are tasked with evaluating an investment opportunity in Company A,
+  which has an LTM Revenue of $${ltm_rev} million and an EBITDA margin of
+  ${ebitda_margin}%. Your firm is considering making a bid at
+  ${entry_mult} times LTM EBITDA (assume multiple parity for exit) and funding the acquisition with
+  ${debt_percent}%  debt with an interest rate of
+  ${int_rate}%. The management is confident that the firm can acheive a revenue growth of
+  ${rev_growth}% per year and maintain constant EBITDA margins. The firm has a tax rate of
+  ${tax_rate}%. Capital Expenditures are equal to
+  ${capex_pr}% of the revenue and are equal to Depreciation. Net Working Capital is
+  ${nwc_pr}% of revenue each year. What would the IRR of this investment be over
+  a 5 year horizon?`
   return (
     <Main>
       <HeaderText text="Paper LBO Tool" color1="black" />
       <br />
       <p>
-        You are tasked with evaluating an investment opportunity in Company A,
-        which has an LTM Revenue of $
-        <VariableTag variable={ltm_rev} />
-        million and an EBITDA Margin of
-        <VariableTag variable={ebitda_margin} />
-        percent. Your firm is considering makeing a bid at
-        <VariableTag variable={entry_mult} />
-        times LTM EBITDA (assume multiple parity for exit) and funding the acquisition with
-        <VariableTag variable={debt_percent} />
-        percent debt with an interest rate of
-        <VariableTag variable={int_rate} />
-        percent. The management is confident that the firm can acheive a revenue growth of
-        <VariableTag variable={rev_growth} />
-        percent per year and maintain constant EBITDA margins. he firm has a tax rate of
-        <VariableTag variable={tax_rate} />
-        percent. Capital Expenditures are equal to
-        <VariableTag variable={capex_pr} />
-        percent of the revenue and are equal to Depreciation. Net Working Capital is
-        <VariableTag variable={nwc_pr} />
-        percent of revenue each year. What would the IRR of this investment be over
-        a 5 year horizon?
+        {text}
       </p>
       <br />
+      <Timer submitted={submitted} reset={reset} setReset={setReset} />
       <AnswerBox>
         {!submitted ? (
           <>
@@ -70,7 +63,7 @@ const Page = ({
         ) : (
           <>
             <p>
-              You Geussed:
+              You Guessed:
               <VariableTag variable={attempt} />
               %
             </p>
@@ -94,6 +87,7 @@ const Page = ({
             >
               Another One
             </GButton>
+            
           </>
         )}
       </AnswerBox>

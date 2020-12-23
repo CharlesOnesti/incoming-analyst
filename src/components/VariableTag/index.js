@@ -5,7 +5,7 @@ const VariableTag = ({ variable }) => (
   <span>
     {' '}
     {variable}
-    {' '}
+    {''}
   </span>
 )
 
