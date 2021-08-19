@@ -10,7 +10,7 @@ const Quiz = () => {
   return (
     <Page
       variables={variables}
-      solution={solve(variables)}
+      data={solve(variables)}
       reset={reset}
       setReset={setReset}
     />

@@ -1,14 +1,15 @@
 /* eslint-disable camelcase */
 import React, { useState } from 'react'
-import { Main, AnswerBox } from './styles'
+import { Main, AnswerBox, BodyPara, StyledTable } from './styles'
 import HeaderText from '../../../../components/HeaderText'
 import GButton from '../../../../components/Button'
 import Input from '../../../../components/Input'
 import VariableTag from '../../../../components/VariableTag'
 import Timer from '../../../../components/Timer'
+import { names } from '../../../../utils/utility'
 
 const Page = ({
-  variables, solution, reset, setReset,
+  variables, data, reset, setReset,
 }) => {
   const [attempt, setAttempt] = useState('')
   const [submitted, setSubmitted] = useState(false)
@@ -42,9 +43,9 @@ const Page = ({
     <Main>
       <HeaderText text="Paper LBO Tool" color1="black" />
       <br />
-      <p>
+      <BodyPara>
         {text}
-      </p>
+      </BodyPara>
       <br />
       <Timer submitted={submitted} reset={reset} setReset={setReset} />
       <AnswerBox>
@@ -69,10 +70,10 @@ const Page = ({
             </p>
             <p>
               The correct answer was
-              <VariableTag variable={Math.round(solution * 1000) / 10} />
+              <VariableTag variable={Math.round(data.irr * 1000) / 10} />
               %
             </p>
-            {Math.abs(attempt - Math.round(solution * 1000) / 10) < 2.5
+            {Math.abs(attempt - Math.round(data.irr * 1000) / 10) < 2.5
               ? <p style={{ color: 'green' }}>Great Work!</p>
               : <p style={{ color: 'red' }}>Try again</p>}
             <GButton onClick={() => {
@@ -87,7 +88,66 @@ const Page = ({
             >
               Another One
             </GButton>
-            
+            <StyledTable>
+            <thead>
+                <tr>
+                  <td>
+                  </td>
+                  <td>
+                    Enter
+                  </td>
+                  <td>
+                    Exit
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>LTM EBITDA</td><td>{Math.round(data.financials.EBITDA[0])}</td><td>{Math.round(data.financials.EBITDA[5])}</td></tr>
+                <tr><td>(x) EBITDA Multiple</td><td>{`${data.returns.entry_mult}x`}</td><td>{`${data.returns.entry_mult}x`}</td></tr>
+                <tr><td>Enterprise Value</td><td>{Math.round(data.financials.EBITDA[0] * data.returns.entry_mult)}</td><td>{Math.round(data.financials.EBITDA[5] * data.returns.entry_mult)}</td></tr>
+                <tr><td>(-) Net Debt</td><td>{-Math.round(data.returns.entry_nd)}</td><td>{-Math.round(data.returns.exit_nd)}</td></tr>
+                <tr><td>Equity Value</td><td>{Math.round((data.financials.EBITDA[0] * data.returns.entry_mult - data.returns.entry_nd))}</td><td>{Math.round((data.financials.EBITDA[5] * data.returns.entry_mult - data.returns.exit_nd))}</td></tr>
+              </tbody>
+            </StyledTable>
+            <StyledTable>
+              <thead>
+                <tr>
+                <td>
+                  </td>
+                  <td>
+                    Year 0
+                  </td>
+                  <td>
+                    Year 1
+                  </td>
+                  <td>
+                    Year 2
+                  </td>
+                  <td>
+                    Year 3
+                  </td>
+                  <td>
+                    Year 4
+                  </td>
+                  <td>
+                    Year 5
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.keys(data.financials).map(x => 
+                  <tr key={x}>
+                    <td>{names[x]}</td>
+                    {data.financials[x].map((a, i) => {
+                      console.log(i, x)
+                        if ((i === 0 && !(x == 'Revenue' || x === 'EBITDA'))) {return (<td/>)}
+                        else {return(<td>{Math.round(a)}</td>)}
+                      })}
+                  </tr>
+                )}
+              </tbody>
+            </StyledTable>
+            <div style={{height: 100}} />
           </>
         )}
       </AnswerBox>

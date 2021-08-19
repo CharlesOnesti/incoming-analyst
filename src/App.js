@@ -1,6 +1,6 @@
 import React from 'react'
 import { ApolloProvider } from '@apollo/react-hooks'
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import theme from './theme'
 import client from './client'
@@ -9,16 +9,16 @@ import Quiz from './containers/Quiz'
 import history from './history'
 
 const App = () => (
-  <BrowserRouter history={history}>
+  <Router history={history}>
     <ThemeProvider theme={theme}>
       <ApolloProvider client={client}>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/quiz" component={Quiz} />
+          <Route path="/quiz" component={Quiz} />
         </Switch>
       </ApolloProvider>
     </ThemeProvider>
-  </BrowserRouter>
+  </Router>
 )
 
 export default App

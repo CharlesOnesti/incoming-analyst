@@ -11,7 +11,7 @@ export const Container = styled.div`
 `
 
 export const Header = styled.h1`
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: arial;
   font-size: 48px;
   color: ${props => props.color};
   span {

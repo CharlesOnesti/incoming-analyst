@@ -3,10 +3,11 @@ export const generate = () => {
   const entry_mult = Math.floor(Math.random() * (12 - 8 + 1) + 8)
   const ltm_rev = Math.floor(Math.random() * (9 - 1 + 1) + 1) * 100
   const ebitda_margin = Math.floor(Math.random() * (4 - 2 + 1) + 2) * 10
-  const debt_percent = Math.floor(Math.random() * (8 - 5 + 1) + 5) * 10
+  const debt_percent = Math.floor(Math.random() * (6 - 4 + 1) + 4) * 10
   const int_rate = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
+  console.log(debt_percent)
   let rev_growth
-  if (entry_mult < 10) {
+  if (entry_mult < 15) {
     rev_growth = 5
   } else {
     rev_growth = 10
@@ -45,23 +46,23 @@ export const solve = ({
 
   const entry_ev = entry_mult * ebitda_array[0]
   const entry_nd = (debt_percent / 100) * entry_ev
-  const da_array = rev_array.map(a => a * (capex_pr / 100))
+  const da_array = rev_array.map(a => -(a * (capex_pr / 100)))
 
-  const ebit_array = ebitda_array.map((a, i) => a - da_array[i])
-  const int_array = new Array(6).fill((int_rate / 100) * entry_nd)
+  const ebit_array = ebitda_array.map((a, i) => a + da_array[i])
+  const int_array = new Array(6).fill(-((int_rate / 100) * entry_nd))
 
-  const ebt_array = ebit_array.map((a, i) => a - int_array[i])
+  const ebt_array = ebit_array.map((a, i) => a + int_array[i])
   const nwc_array = rev_array.map(a => a * (nwc_pr / 100))
-  const tax_array = ebt_array.map(a => a * (tax_rate / 100))
+  const tax_array = ebt_array.map(a => -(Math.max(a,0) * (tax_rate / 100)))
 
-  const ni_array = ebt_array.map((a, i) => a - tax_array[i])
-  const capex_array = rev_array.map(a => a * (capex_pr / 100))
+  const ni_array = ebt_array.map((a, i) => a + tax_array[i])
+  const capex_array = rev_array.map(a => -(a * (capex_pr / 100)))
   const nwc_change_array = [0]
   for (let i = 1; i < nwc_array.length; i++) {
-    nwc_change_array[i] = nwc_array[i] - nwc_array[i - 1]
+    nwc_change_array[i] = nwc_array[i - 1] + nwc_array[i]
   }
 
-  const fcf_array = ni_array.map((a, i) => a + da_array[i] - nwc_change_array[i] - capex_array[i])
+  const fcf_array = ni_array.map((a, i) => a + da_array[i] + nwc_change_array[i] + capex_array[i])
 
   const exit_ev = entry_mult * ebitda_array[5]
   const exit_nd = entry_nd - fcf_array.slice(1, 6).reduce((a, b) => a + b, 0)
@@ -86,5 +87,43 @@ export const solve = ({
   // console.log('exit_equity: ', exit_equity)
   // console.log('entry_mult: ', entry_mult)
 
-  return irr
+  return {
+    irr,
+    financials: {
+      Revenue: rev_array,
+      EBITDA: ebitda_array,
+      DA: da_array,
+      EBIT: ebit_array,
+      Interest: int_array,
+      EBT: ebt_array,
+      Taxes: tax_array,
+      Income: ni_array,
+      NegatedDA: da_array.map(a => -a),
+      NWC: nwc_change_array,
+      Capex: capex_array,
+      FCF: fcf_array,
+      NWC: nwc_array,
+    },
+    returns: {
+      entry_mult,
+      entry_nd,
+      exit_nd,
+    }
+  }
+}
+
+export const names = {
+  Revenue: 'Revenue',
+  EBITDA: 'EBITDA',
+  DA: '(-) D&A',
+  EBIT: 'EBIT',
+  Interest: '(-) Interest',
+  EBT: 'EBT',
+  Taxes: '(-) Taxes',
+  Income: 'Net Income',
+  NegatedDA: '(+) D&A',
+  NWC: '(-) Increase in NWC',
+  Capex: '(-) Capex',
+  FCF: 'Free Cash Flow',
+  NWC: 'Memo: NWC',
 }
