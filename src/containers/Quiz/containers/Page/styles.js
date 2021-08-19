@@ -52,7 +52,8 @@ export const StyledTable = styled.table`
 
   td {
     padding: 5px 10px;
-    text-align:left;
+    text-align: left;
+    font-family: arial;
   }
 
   tbody tr {
