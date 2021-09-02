@@ -1,13 +1,13 @@
 /* eslint-disable camelcase */
 export const generate = () => {
-  const entry_mult = Math.floor(Math.random() * (12 - 8 + 1) + 8)
+  const entry_mult = Math.floor(Math.random() * (15 - 10 + 1) + 10)
   const ltm_rev = Math.floor(Math.random() * (9 - 1 + 1) + 1) * 100
   const ebitda_margin = Math.floor(Math.random() * (4 - 2 + 1) + 2) * 10
   const debt_percent = Math.floor(Math.random() * (6 - 4 + 1) + 4) * 10
   const int_rate = Math.floor(Math.random() * (2 - 1 + 1) + 1) * 5
   console.log(debt_percent)
   let rev_growth
-  if (entry_mult < 15) {
+  if (entry_mult < 13) {
     rev_growth = 5
   } else {
     rev_growth = 10
@@ -59,7 +59,7 @@ export const solve = ({
   const capex_array = rev_array.map(a => -(a * (capex_pr / 100)))
   const nwc_change_array = [0]
   for (let i = 1; i < nwc_array.length; i++) {
-    nwc_change_array[i] = nwc_array[i - 1] + nwc_array[i]
+    nwc_change_array[i] =  (nwc_array[i] - nwc_array[i - 1]) * -1
   }
 
   const fcf_array = ni_array.map((a, i) => a + da_array[i] + nwc_change_array[i] + capex_array[i])
