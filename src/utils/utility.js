@@ -62,7 +62,7 @@ export const solve = ({
     nwc_change_array[i] =  (nwc_array[i] - nwc_array[i - 1]) * -1
   }
 
-  const fcf_array = ni_array.map((a, i) => a + da_array[i] + nwc_change_array[i] + capex_array[i])
+  const fcf_array = ni_array.map((a, i) => a - da_array[i] + nwc_change_array[i] + capex_array[i])
 
   const exit_ev = entry_mult * ebitda_array[5]
   const exit_nd = entry_nd - fcf_array.slice(1, 6).reduce((a, b) => a + b, 0)
